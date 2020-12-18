@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px
+}
+
+.box > div {
+    border: 10px black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.coin {
+    font-size: 30px;
+    font-weight: bold;
+}
