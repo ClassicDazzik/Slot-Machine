@@ -53,3 +53,10 @@ function roll() {
     // locks[1] = 0;
     // locks[2] = 0;
 }
+
+function lock1() {
+if (slot1.lock = 0) {
+    slot1.lock = 1;
+}   else {
+    slot1.lock = 0;
+} }
