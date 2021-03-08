@@ -1,6 +1,6 @@
-var money=1000
+money=1000
 var fruits = ["Apple", "Orange","Pear","Banana","Melon"];
-let locks = [0,0,0];
+// let locks = [0,0,0];
 
 let slot1 = {
         id: "roll1",
@@ -31,13 +31,17 @@ let slotMachine = {
             if (slot.lock == 0){
                 slot.roll = fruits[Math.floor(Math.random()*fruits.length)];
                 document.getElementById(slot.id).innerHTML = slot.roll;
-            } 
+            } else {
+                slot.lock = 0;
+            }
         })
     }
 }
 
 function roll() {
-
+    
+    money = money - 100;
+   // if (money > 100);
     slotMachine.update();
 
     // if (locks[1] == 0){
@@ -54,9 +58,9 @@ function roll() {
     // locks[2] = 0;
 }
 
-function lock1() {
-if (slot1.lock = 0) {
-    slot1.lock = 1;
-}   else {
-    slot1.lock = 0;
-} }
+function lock(slot) {
+    if (slot.lock == 0) {
+        slot.lock = 1;
+    }   else {
+        slot.lock = 0;
+    } }
