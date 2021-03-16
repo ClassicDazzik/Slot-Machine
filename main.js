@@ -39,10 +39,12 @@ let slotMachine = {
 }
 
 function roll() {
-    
+    if (money > 100) {
     money = money - 100;
-   // if (money > 100);
-    slotMachine.update();
+    slotMachine.update(); 
+    } else {
+        alert("No money!")
+    }
 
     // if (locks[1] == 0){
     //     var roll2 = fruits[Math.floor(Math.random()*fruits.length)];
