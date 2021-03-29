@@ -35,34 +35,48 @@ let slotMachine = {
                 slot.lock = 0;
             }
         })
-    }
-}
+    },
+    check: function(){
+
+let winString = `${this.slots[0].roll},${this.slots[1].roll},${this.slots[2].roll}`
+
+        if(winString == "Banana") {
+            console.log("Bansku Win!");
+            money += 200;
+        }
+        else if(winString == "Melon") {
+            console.log("Melon Win!");
+            money += 500;
+        }
+        else if(winString == "Apple") {
+            console.log("Apple Win!");
+            money += 200;
+        }
+        else if(winString == "Orange") {
+            console.log("Orange Win!");
+            money += 200;
+        }
+        else if(winString == "Pear") {
+            console.log("Pear Win!");
+            money += 200;
+        }
+        else {
+            console.log("No win.");
+        } 
+    } }
 
 function roll() {
     if (money > 100) {
-    money = money - 100;
-    slotMachine.update(); 
+    money -= 100;
+    slotMachine.update();
+    slotMachine.check(); 
     } else {
         alert("No money!")
-    }
-
-    // if (locks[1] == 0){
-    //     var roll2 = fruits[Math.floor(Math.random()*fruits.length)];
-    //     document.getElementById("roll2").innerHTML = roll2;
-    // }
-    // if (locks[2] == 0){
-    //     var roll3 = fruits[Math.floor(Math.random()*fruits.length)];
-    //     document.getElementById("roll3").innerHTML = roll3;
-    // }
-   
-    // slotMachine.slot1.lock = 0;
-    // locks[1] = 0;
-    // locks[2] = 0;
-}
+    }   }
 
 function lock(slot) {
     if (slot.lock == 0) {
         slot.lock = 1;
     }   else {
         slot.lock = 0;
-    } }
+    } } 
