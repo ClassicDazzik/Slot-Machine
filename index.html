@@ -8,21 +8,20 @@
 </head>
 <body>
 <div class="box">
-    <div class="coin">
+    <div>
         <button onclick="roll()" type="button" class="rollbtn">Roll</button>
-        <button onclick="lock(slot1)" type="button" class="rollbtn">Lock 1</button>
-        <button onclick="lock(slot2)" type="button" class="rollbtn">Lock 2</button>
-        <button onclick="lock(slot3)" type="button" class="rollbtn">Lock 3</button>
     </div>
     <div class="mid">
-        <p id="roll1" class="slot"></p> 
+        <p id="roll1" class="slot"></p>
         <p id="roll2" class="slot"></p>
         <p id="roll3" class="slot"></p>
+        <button onclick="lock(slot1)" type="button" class="rollbtn">Lock 1</button>
+        <button onclick="lock(slot2)" type="button" class="rollbtn">Lock 2</button> 
+        <button onclick="lock(slot3)" type="button" class="rollbtn">Lock 3</button>
     </div>
     <div>
-        <p id=lock></p>
+        <p id="cash"></p>
     </div>
-
 </div>
 
 </body>

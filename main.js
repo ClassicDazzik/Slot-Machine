@@ -1,4 +1,4 @@
-money=1000
+let money=1000;
 var fruits = ["Apple", "Orange","Pear","Banana","Melon"];
 // let locks = [0,0,0];
 
@@ -30,7 +30,7 @@ let slotMachine = {
         this.slots.forEach(slot => {
             if (slot.lock == 0){
                 slot.roll = fruits[Math.floor(Math.random()*fruits.length)];
-                document.getElementById(slot.id).innerHTML = slot.roll;
+                document.getElementById(slot.id).innerHTML = slot.roll; 
             } else {
                 slot.lock = 0;
             }
@@ -40,30 +40,31 @@ let slotMachine = {
 
 let winString = `${this.slots[0].roll},${this.slots[1].roll},${this.slots[2].roll}`
 
-        if(winString == "Banana") {
+        if(winString == "Banana,Banana,Banana") {
             console.log("Bansku Win!");
             money += 200;
         }
-        else if(winString == "Melon") {
+        else if(winString == "Melon,Melon,Melon") {
             console.log("Melon Win!");
             money += 500;
         }
-        else if(winString == "Apple") {
+        else if(winString == "Apple,Apple,Apple") {
             console.log("Apple Win!");
             money += 200;
         }
-        else if(winString == "Orange") {
+        else if(winString == "Orange,Orange,Orange") {
             console.log("Orange Win!");
             money += 200;
         }
-        else if(winString == "Pear") {
+        else if(winString == "Pear,Pear,Pear") {
             console.log("Pear Win!");
             money += 200;
         }
         else {
             console.log("No win.");
         } 
-    } }
+    } 
+}
 
 function roll() {
     if (money > 100) {
@@ -72,7 +73,8 @@ function roll() {
     slotMachine.check(); 
     } else {
         alert("No money!")
-    }   }
+    }
+}
 
 function lock(slot) {
     if (slot.lock == 0) {
