@@ -14,6 +14,22 @@
     text-align: center;
 }
 
-.mid{
+.rollbtn {
+  position: relative;
+  top: 90px;
+  font-size: 30px;
+  border: 5px solid black;
+  padding: 5px;
+}
+
+.row2{
   columns: 500px;
+}
+
+.slot {
+  font-size: 20px;
+}
+
+.row3 {
+  font-size: 30px;
 }

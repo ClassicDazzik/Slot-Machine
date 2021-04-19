@@ -8,19 +8,19 @@
 </head>
 <body>
 <div class="box">
-    <div>
+    <div class="row1">
         <button onclick="roll()" type="button" class="rollbtn">Roll</button>
     </div>
-    <div class="mid">
-        <p id="roll1" class="slot"></p>
-        <p id="roll2" class="slot"></p>
-        <p id="roll3" class="slot"></p>
-        <button onclick="lock(slot1)" type="button" class="rollbtn">Lock 1</button>
-        <button onclick="lock(slot2)" type="button" class="rollbtn">Lock 2</button> 
-        <button onclick="lock(slot3)" type="button" class="rollbtn">Lock 3</button>
+    <div class="row2">
+        <p id="roll1" class="slot">empty</p>
+        <p id="roll2" class="slot">empty</p>        
+        <p id="roll3" class="slot">empty</p>
+        <button onclick="lock(slot1)" type="button" class="lockbtn">Lock 1</button>
+        <button onclick="lock(slot2)" type="button" class="lockbtn">Lock 2</button> 
+        <button onclick="lock(slot3)" type="button" class="lockbtn">Lock 3</button>
     </div>
-    <div>
-        <p id="cash"></p>
+    <div class="row3">
+        <p>Your money: <span id="cash"></span></p>
     </div>
 </div>
 
